@@ -25,8 +25,8 @@ function mainFunc(event){
   var rect = c.getBoundingClientRect();
   ctx.fillStyle = "#FF0000";
   if (state == 0){
-    console.log("clientX: " + (event.clientX - rect.left));
-    console.log("clientY: " + (event.clientY - rect.top));
+    // console.log("clientX: " + (event.clientX - rect.left));
+    // console.log("clientY: " + (event.clientY - rect.top));
     // console.log("screenX: " + e.screenX);
     // console.log("screenY: " + e.screenY);
     ctx.fillRect(event.clientX - rect.left-75, event.clientY - rect.top-50, 150, 100);
