@@ -1,5 +1,6 @@
 var state = 0;
-document.getElementById("slate").addEventListener('mousedown', mainFunc);
+//var el = document.querySelector("#slate");
+//document.getElementById("slate").addEventListener('mousedown', mainFunc);
 
 function clearTime(){
   var ctx = document.getElementById("slate").getContext("2d");
@@ -18,19 +19,21 @@ function switchTime(){
   }
 }
 
-function mainFunc(e){
-  var ctx = document.getElementById("slate").getContext("2d");
+function mainFunc(event){
+  var c = document.getElementById("slate");
+  var ctx = c.getContext("2d");
+  var rect = c.getBoundingClientRect();
   ctx.fillStyle = "#FF0000";
   if (state == 0){
-    console.log("clientX: " + e.clientX);
-    console.log("clientY: " + e.clientY);
+    console.log("clientX: " + (event.clientX - rect.left));
+    console.log("clientY: " + (event.clientY - rect.top));
     // console.log("screenX: " + e.screenX);
     // console.log("screenY: " + e.screenY);
-    ctx.fillRect(e.clientX, e.clientY, 150, 100);
+    ctx.fillRect(event.clientX - rect.left-75, event.clientY - rect.top-50, 150, 100);
   }
   else {
     ctx.beginPath();
-    ctx.ellipse(e.clientX-20, e.clientY-20, 40, 40, Math.PI, 0, 2 * Math.PI);
+    ctx.ellipse(event.clientX - rect.left, event.clientY - rect.top, 40, 40, Math.PI, 0, 2 * Math.PI);
     ctx.stroke();
   }
 }
