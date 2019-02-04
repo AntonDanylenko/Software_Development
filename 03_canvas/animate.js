@@ -7,13 +7,13 @@ var c = document.getElementById("playground");
 var ctx = c.getContext("2d");
 var dotButton = document.getElementById("circle");
 var stopButton = document.getElementById("stop");
-var requestID;
+var requestID=0;
 var radius = 0;
 var growing = false;
 var clear = function(e){
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
-var drawDot = function(){
+var drawDot = function(event){
   clear();
   ctx.fillStyle = "#00FFFF";
   ctx.beginPath();
@@ -30,7 +30,6 @@ var drawDot = function(){
   ctx.stroke();
   ctx.fill();
   requestID = window.requestAnimationFrame(drawDot);
-  //console.log(requestID);
 }
 var stopIt = function(){
   console.log(requestID);
