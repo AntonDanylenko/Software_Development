@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Paint</title>
+  </head>
+
+  <style>
+    #playground { border: 1px solid black }
+    .button { border-radius:8px;
+      border: none;
+      color: white;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;}
+  </style>
+
+  <div>
+    <button id="draw">
+      Brush
+    </button>
+
+    <div>
+      <div>
+        Your Color:
+        <div id="current"><button class="button" style="background-color: #000000;"></button></div>
+      </div>
+      Select:
+      <div>
+        <button class="button" id="pick" style="background-color: #000000;"></button>
+        <button class="button" id="pick" style="background-color: #FF0000;"></button>
+        <button class="button" id="pick" style="background-color: #FF4500;"></button>
+        <button class="button" id="pick" style="background-color: #FFFF00;"></button>
+        <button class="button" id="pick" style="background-color: #00FF00;"></button>
+        <button class="button" id="pick" style="background-color: #0000FF;"></button>
+        <button class="button" id="pick" style="background-color: #FF00FF;"></button>
+      </div>
+    </div>
+
+    <button id="clear">
+      CLEAR
+    </button>
+  </div>
+
+  <canvas width="500" height="500" id="playground">
+  </canvas>
+
+  <script src="paint.js">
+  </script>
+
+</html>

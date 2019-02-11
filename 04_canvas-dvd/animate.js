@@ -56,9 +56,9 @@ var dvdLogoSetup = function(){
   var logo = new Image();
   logo.src = "logo_dvd.jpg";
   var dvdLogo = function(){
-    if (requestID){
-      stopIt();
-    }
+    // if (requestID){
+    //   stopIt();
+    // }
     clear();
     ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
     if (rectX>=c.width-rectWidth || rectX<=0){
