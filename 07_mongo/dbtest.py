@@ -49,8 +49,6 @@ print(male/malecnt)
 print("average age in 1960:")
 print((female+male)/(femalecnt+malecnt))
 
-# I kind of forget how to do percentiles but here goes nothing
-
 tot=femalecnt+malecnt
 twentyfifth=int(.25*tot)
 seventyfifth=int(.75*tot)
@@ -67,4 +65,4 @@ for x in record:
     if seventyfifth <=0:
         print("75th percentile age:")
         print(x["age"])
-break
+        break
