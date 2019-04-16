@@ -1,8 +1,8 @@
 #1 Union
-set1 = {1,2,3}
-set2 = {2,3,4}
-union = {x for x in set1 if x not in set2} | set2
-print(union)
+set1 = [1,2,3]
+set2 = [2,3,4]
+union = [x for x in set1 if x not in set2].append(set2)
+print(str(union))
 
 #2 Intersection
 set1 = {1,2,3}
