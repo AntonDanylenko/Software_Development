@@ -6,6 +6,7 @@ fd.close()
 
 
 print("Count of proletariat: " + str(book.count('proletariat')))
+print("Count of 'working class': " + str(book.count('working class')))
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 words = []
@@ -24,11 +25,11 @@ for char in book:
 #         count+=1
 # print(count)
 
-common_words = ["the", "and", "to", "by", "is", "in", "of", "a", "that", "it", "he", "she", "them"]
+common_words = ["the", "and", "to", "by", "is", "in", "of", "a", "that", "it", "them"]
 max_word = ""
 max_count = 0
 for x in words:
     if words.count(x)>max_count and x not in common_words:
         max_count = words.count(x)
         max_word = x
-print("Max word: [" + str(max_word) + "], count: " + str(max_count))
+print("Max uncommon word: " + str(max_word) + "; Count: " + str(max_count))
